@@ -7,16 +7,19 @@
 }
 
 .infected{
-    border-bottom: 12px solid #10375c;
+    border: 12px solid #10375c;
+    border-bottom: 12px solid white;
     
 
 }
 .recovered{
-    border-bottom: 12px solid #b6eb7a;
+    border: 12px solid #b6eb7a ;
+    border-bottom:12px solid white;
     
     
 }
 .deaths{
-    border-bottom:  12px solid #e84545;
+    border: 12px solid #e84545 ;
+    border-bottom: 12px solid white ;
     
 }
