@@ -18,9 +18,9 @@ const Cards = ({data:{confirmed,deaths,recovered,lastUpdate} , country} ) => {
                         <Typography variant='h4'>
                             <CountUp start={0}end={confirmed.value} duration={2.5} separator=","></CountUp>
                         </Typography>
-                        <Typography >{new Date(lastUpdate).toDateString()}</Typography>
+                        <Typography className={styles.date}>{new Date(lastUpdate).toDateString()}</Typography>
                         {country?
-                        <Typography variant="body2">Number of Active Cases of Covid-19 in {country} </Typography>:
+                        <Typography className={styles.heading} variant="body2">Number of Active Cases of Covid-19 in {country} </Typography>:
                         <Typography variant="body2">Number of Active Cases of Covid-19 Globally </Typography>
                         }
                         
@@ -32,9 +32,9 @@ const Cards = ({data:{confirmed,deaths,recovered,lastUpdate} , country} ) => {
                         <Typography variant='h4'>
                             <CountUp start={0}end={recovered.value} duration={2.5} separator=","></CountUp>
                         </Typography>
-                        <Typography >{new Date(lastUpdate).toDateString()}</Typography>
+                        <Typography  className={styles.date} >{new Date(lastUpdate).toDateString()}</Typography>
                         {country?
-                        <Typography variant="body2">Number of Recovered Patients of Covid-19 in {country} </Typography>:
+                        <Typography className={styles.heading} variant="body2">Number of Recovered Patients of Covid-19 in {country} </Typography>:
                         <Typography variant="body2">Number of Recovered Patients of Covid-19 Globally </Typography>
                         }
                     </CardContent>
@@ -45,9 +45,9 @@ const Cards = ({data:{confirmed,deaths,recovered,lastUpdate} , country} ) => {
                         <Typography variant='h4'>
                             <CountUp start={0}end={deaths.value} duration={2.5} separator=","></CountUp>
                         </Typography>
-                        <Typography >{new Date(lastUpdate).toDateString()}</Typography>
+                        <Typography className={styles.date} >{new Date(lastUpdate).toDateString()}</Typography>
                         {country?
-                        <Typography variant="body2">Number of Deaths due to Covid-19 in {country} </Typography>:
+                        <Typography className={styles.heading} variant="body2">Number of Deaths due to Covid-19 in {country} </Typography>:
                         <Typography variant="body2">Number of Deaths due to Covid-19 Globally</Typography>
                         }
                     </CardContent>
