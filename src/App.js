@@ -4,7 +4,7 @@ import Cards from './components/Cards/Cards';
 import Chart from './components/Chart/Chart';
 import CountryPicker from './components/CountryPicker/CountryPicker';
 import {fetchData} from './api';
-import covid from './covid.jpg'
+import covid from './covid.jpg'  //heading image 
 
 import styles from './App.module.css';
 
@@ -15,11 +15,11 @@ class App extends React.Component {
         country:'',
     }
 
-    async componentDidMount () {
+    async componentDidMount () {    //cDM to fetch the data first 
         const fetchedData = await fetchData();
         this.setState({data :fetchedData})
     }
-    handleCountryChange = async (country)=> {
+    handleCountryChange = async (country)=> {    
         const data = await fetchData(country);
         this.setState({ data, country: country });
     }

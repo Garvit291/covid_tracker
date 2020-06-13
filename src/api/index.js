@@ -2,9 +2,10 @@ import axios from 'axios';
 
 const url = 'https://covid19.mathdro.id/api'
 
-export const fetchData = async (country) => {
+// function to fetch data for confirmed recovered and deaths 
+export const fetchData = async (country) => {  
 
-    let changedURL=url;
+    let changedURL=url; // url can be changable as to switch between gloabl and country 
 
     if(country){
         changedURL=`${url}/countries/${country}`;
@@ -23,8 +24,9 @@ export const fetchData = async (country) => {
     }
 
 }
-
-export const fetchDailyData = async () =>{
+ 
+// function to fetch daily data for line chart
+export const fetchDailyData = async () =>{              
     try{
         const {data} = await axios.get(`${url}/daily`);
 
@@ -40,6 +42,8 @@ export const fetchDailyData = async () =>{
     }
 
 }
+
+// function to fecth countrie name to pass them to country picker
 
 export const fetchCountries = async () =>{
     try{

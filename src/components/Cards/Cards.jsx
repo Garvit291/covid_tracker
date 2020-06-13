@@ -2,16 +2,16 @@ import React from 'react';
 
 import { Card , CardContent , Typography , Grid} from '@material-ui/core';
 import CountUp from 'react-countup';
-import cx from 'classnames';
+import cx from 'classnames';  // use multiple class name at one object
 
 import styles from './Cards.module.css';
 const Cards = ({data:{confirmed,deaths,recovered,lastUpdate} , country} ) => {
     if(!confirmed){
-        return 'Loading!!'
+        return 'Loading!!'  // if the data is not fetched
     }
     return(
         <div className={styles.container}>
-            <Grid container spacing={3} justify="center">
+            <Grid container spacing={3} justify="center">   
                 <Grid  item component={Card}  xs={12} md={3} className={cx(styles.card , styles.infected)}>
                     <CardContent>
                         <Typography  gutterBottom>INFECTED</Typography>
